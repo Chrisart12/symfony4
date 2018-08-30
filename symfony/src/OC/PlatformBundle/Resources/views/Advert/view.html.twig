@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>Affichage de l'annonce {{ id }} </title>
+</head>
+<body>
+	<h1>Affichage de l'annonce n°{{ id }} !</h1>
+
+	<div>
+		{% for lemessage in app.session.flashbag.get('notice') %}
+			<p>Message flash : {{ lemessage }} </p>
+		{% endfor %}
+	</div>
+
+	<p>
+		Ici nous pourrons lire l'annonce ayant comme id : {{ id }}<br />
+		Mais pour l'instant..........!
+	</p>
+	
+</body>
+</html>
